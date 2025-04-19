@@ -14,10 +14,13 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-04-19T16:14:40.215Z"
+    "x-generation-date": "2025-04-19T16:41:06.511Z"
   },
   "x-strapi-config": {
-    "plugins": ["upload", "users-permissions"]
+    "plugins": [
+      "upload",
+      "users-permissions"
+    ]
   },
   "servers": [
     {
@@ -99,7 +102,9 @@
             }
           }
         },
-        "tags": ["Article"],
+        "tags": [
+          "Article"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -269,7 +274,9 @@
             }
           }
         },
-        "tags": ["Article"],
+        "tags": [
+          "Article"
+        ],
         "parameters": [],
         "operationId": "post/articles",
         "requestBody": {
@@ -348,7 +355,9 @@
             }
           }
         },
-        "tags": ["Article"],
+        "tags": [
+          "Article"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -426,7 +435,9 @@
             }
           }
         },
-        "tags": ["Article"],
+        "tags": [
+          "Article"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -515,7 +526,9 @@
             }
           }
         },
-        "tags": ["Article"],
+        "tags": [
+          "Article"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -595,7 +608,9 @@
             }
           }
         },
-        "tags": ["Booking"],
+        "tags": [
+          "Booking"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -765,7 +780,9 @@
             }
           }
         },
-        "tags": ["Booking"],
+        "tags": [
+          "Booking"
+        ],
         "parameters": [],
         "operationId": "post/bookings",
         "requestBody": {
@@ -844,7 +861,9 @@
             }
           }
         },
-        "tags": ["Booking"],
+        "tags": [
+          "Booking"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -922,7 +941,9 @@
             }
           }
         },
-        "tags": ["Booking"],
+        "tags": [
+          "Booking"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1011,7 +1032,9 @@
             }
           }
         },
-        "tags": ["Booking"],
+        "tags": [
+          "Booking"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1091,7 +1114,9 @@
             }
           }
         },
-        "tags": ["Choir"],
+        "tags": [
+          "Choir"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -1261,7 +1286,9 @@
             }
           }
         },
-        "tags": ["Choir"],
+        "tags": [
+          "Choir"
+        ],
         "parameters": [],
         "operationId": "post/choirs",
         "requestBody": {
@@ -1340,7 +1367,9 @@
             }
           }
         },
-        "tags": ["Choir"],
+        "tags": [
+          "Choir"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1418,7 +1447,9 @@
             }
           }
         },
-        "tags": ["Choir"],
+        "tags": [
+          "Choir"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1507,7 +1538,9 @@
             }
           }
         },
-        "tags": ["Choir"],
+        "tags": [
+          "Choir"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1587,7 +1620,9 @@
             }
           }
         },
-        "tags": ["Concert"],
+        "tags": [
+          "Concert"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -1757,7 +1792,9 @@
             }
           }
         },
-        "tags": ["Concert"],
+        "tags": [
+          "Concert"
+        ],
         "parameters": [],
         "operationId": "post/concerts",
         "requestBody": {
@@ -1836,7 +1873,9 @@
             }
           }
         },
-        "tags": ["Concert"],
+        "tags": [
+          "Concert"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1914,7 +1953,9 @@
             }
           }
         },
-        "tags": ["Concert"],
+        "tags": [
+          "Concert"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2003,7 +2044,9 @@
             }
           }
         },
-        "tags": ["Concert"],
+        "tags": [
+          "Concert"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2083,7 +2126,9 @@
             }
           }
         },
-        "tags": ["Course"],
+        "tags": [
+          "Course"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2253,7 +2298,9 @@
             }
           }
         },
-        "tags": ["Course"],
+        "tags": [
+          "Course"
+        ],
         "parameters": [],
         "operationId": "post/courses",
         "requestBody": {
@@ -2332,7 +2379,9 @@
             }
           }
         },
-        "tags": ["Course"],
+        "tags": [
+          "Course"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2410,7 +2459,9 @@
             }
           }
         },
-        "tags": ["Course"],
+        "tags": [
+          "Course"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2499,7 +2550,9 @@
             }
           }
         },
-        "tags": ["Course"],
+        "tags": [
+          "Course"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2579,7 +2632,9 @@
             }
           }
         },
-        "tags": ["District"],
+        "tags": [
+          "District"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2749,7 +2804,9 @@
             }
           }
         },
-        "tags": ["District"],
+        "tags": [
+          "District"
+        ],
         "parameters": [],
         "operationId": "post/districts",
         "requestBody": {
@@ -2828,7 +2885,9 @@
             }
           }
         },
-        "tags": ["District"],
+        "tags": [
+          "District"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2906,7 +2965,9 @@
             }
           }
         },
-        "tags": ["District"],
+        "tags": [
+          "District"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2995,7 +3056,9 @@
             }
           }
         },
-        "tags": ["District"],
+        "tags": [
+          "District"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3075,7 +3138,9 @@
             }
           }
         },
-        "tags": ["Team-member"],
+        "tags": [
+          "Team-member"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -3245,7 +3310,9 @@
             }
           }
         },
-        "tags": ["Team-member"],
+        "tags": [
+          "Team-member"
+        ],
         "parameters": [],
         "operationId": "post/team-members",
         "requestBody": {
@@ -3324,7 +3391,9 @@
             }
           }
         },
-        "tags": ["Team-member"],
+        "tags": [
+          "Team-member"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3402,7 +3471,9 @@
             }
           }
         },
-        "tags": ["Team-member"],
+        "tags": [
+          "Team-member"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3491,7 +3562,9 @@
             }
           }
         },
-        "tags": ["Team-member"],
+        "tags": [
+          "Team-member"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3526,14 +3599,18 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": ["files"],
+                "required": [
+                  "files"
+                ],
                 "type": "object",
                 "properties": {
                   "path": {
@@ -3596,7 +3673,9 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
@@ -3632,7 +3711,9 @@
     },
     "/upload/files": {
       "get": {
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a list of files",
@@ -3664,7 +3745,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a specific file",
@@ -3691,7 +3774,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Delete a file",
@@ -3720,7 +3805,9 @@
             }
           }
         ],
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Login with a provider",
         "description": "Redirects to provider login before being redirect to /auth/{provider}/callback",
         "responses": {
@@ -3742,7 +3829,9 @@
     },
     "/auth/local": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Local login",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -3793,7 +3882,9 @@
     },
     "/auth/local/register": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Register a user",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -3848,7 +3939,9 @@
     },
     "/auth/{provider}/callback": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Default Callback from provider auth",
         "parameters": [
           {
@@ -3887,7 +3980,9 @@
     },
     "/auth/forgot-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send rest password email",
         "requestBody": {
           "required": true,
@@ -3917,7 +4012,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -3939,7 +4036,9 @@
     },
     "/auth/reset-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Rest user password",
         "requestBody": {
           "required": true,
@@ -3993,7 +4092,9 @@
     },
     "/auth/change-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Update user's own password",
         "requestBody": {
           "required": true,
@@ -4047,7 +4148,9 @@
     },
     "/auth/email-confirmation": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Confirm user email",
         "parameters": [
           {
@@ -4078,7 +4181,9 @@
     },
     "/auth/send-email-confirmation": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send confirmation email",
         "requestBody": {
           "required": true,
@@ -4108,7 +4213,9 @@
                     },
                     "sent": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -4130,7 +4237,9 @@
     },
     "/users-permissions/permissions": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get default generated permissions",
         "responses": {
           "200": {
@@ -4199,7 +4308,9 @@
     },
     "/users-permissions/roles": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "List roles",
         "responses": {
           "200": {
@@ -4258,7 +4369,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a role",
         "requestBody": {
           "$ref": "#/components/requestBodies/Users-Permissions-RoleRequest"
@@ -4273,7 +4386,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -4295,7 +4410,9 @@
     },
     "/users-permissions/roles/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a role",
         "parameters": [
           {
@@ -4360,7 +4477,9 @@
     },
     "/users-permissions/roles/{role}": {
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a role",
         "parameters": [
           {
@@ -4386,7 +4505,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -4406,7 +4527,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a role",
         "parameters": [
           {
@@ -4429,7 +4552,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -4451,7 +4576,9 @@
     },
     "/users": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get list of users",
         "responses": {
           "200": {
@@ -4492,7 +4619,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a user",
         "requestBody": {
           "required": true,
@@ -4500,7 +4629,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -4577,7 +4710,9 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a user",
         "parameters": [
           {
@@ -4624,7 +4759,9 @@
         }
       },
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a user",
         "parameters": [
           {
@@ -4643,7 +4780,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -4718,7 +4859,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a user",
         "parameters": [
           {
@@ -4771,7 +4914,9 @@
     },
     "/users/me": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get authenticated user info",
         "responses": {
           "200": {
@@ -4809,7 +4954,9 @@
     },
     "/users/count": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get user count",
         "responses": {
           "200": {
@@ -4848,7 +4995,9 @@
     "schemas": {
       "Error": {
         "type": "object",
-        "required": ["error"],
+        "required": [
+          "error"
+        ],
         "properties": {
           "data": {
             "nullable": true,
@@ -4885,10 +5034,16 @@
       },
       "ArticleRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title", "content", "slug"],
+            "required": [
+              "title",
+              "content",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -4925,7 +5080,12 @@
               },
               "state": {
                 "type": "string",
-                "enum": ["draft", "editorial", "published", "archived"]
+                "enum": [
+                  "draft",
+                  "editorial",
+                  "published",
+                  "archived"
+                ]
               },
               "published": {
                 "type": "string",
@@ -5011,7 +5171,11 @@
       },
       "Article": {
         "type": "object",
-        "required": ["title", "content", "slug"],
+        "required": [
+          "title",
+          "content",
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -5758,7 +5922,12 @@
           },
           "state": {
             "type": "string",
-            "enum": ["draft", "editorial", "published", "archived"]
+            "enum": [
+              "draft",
+              "editorial",
+              "published",
+              "archived"
+            ]
           },
           "published": {
             "type": "string",
@@ -6240,7 +6409,12 @@
                     },
                     "state": {
                       "type": "string",
-                      "enum": ["draft", "editorial", "published", "archived"]
+                      "enum": [
+                        "draft",
+                        "editorial",
+                        "published",
+                        "archived"
+                      ]
                     },
                     "published": {
                       "type": "string",
@@ -7157,7 +7331,12 @@
                     },
                     "state": {
                       "type": "string",
-                      "enum": ["booked", "cancelled", "denied", "waitlisted"]
+                      "enum": [
+                        "booked",
+                        "cancelled",
+                        "denied",
+                        "waitlisted"
+                      ]
                     },
                     "participants": {
                       "type": "array",
@@ -7398,7 +7577,12 @@
           },
           "type": {
             "type": "string",
-            "enum": ["Text", "Number", "Enumeration", "Boolean"]
+            "enum": [
+              "Text",
+              "Number",
+              "Enumeration",
+              "Boolean"
+            ]
           },
           "required": {
             "type": "boolean"
@@ -7448,7 +7632,9 @@
       },
       "BookingRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "type": "object",
@@ -7481,7 +7667,12 @@
               },
               "state": {
                 "type": "string",
-                "enum": ["booked", "cancelled", "denied", "waitlisted"]
+                "enum": [
+                  "booked",
+                  "cancelled",
+                  "denied",
+                  "waitlisted"
+                ]
               },
               "participants": {
                 "type": "array",
@@ -8499,7 +8690,12 @@
                     },
                     "state": {
                       "type": "string",
-                      "enum": ["draft", "editorial", "published", "archived"]
+                      "enum": [
+                        "draft",
+                        "editorial",
+                        "published",
+                        "archived"
+                      ]
                     },
                     "published": {
                       "type": "string",
@@ -9416,7 +9612,12 @@
                     },
                     "state": {
                       "type": "string",
-                      "enum": ["booked", "cancelled", "denied", "waitlisted"]
+                      "enum": [
+                        "booked",
+                        "cancelled",
+                        "denied",
+                        "waitlisted"
+                      ]
                     },
                     "participants": {
                       "type": "array",
@@ -9548,7 +9749,12 @@
           },
           "state": {
             "type": "string",
-            "enum": ["booked", "cancelled", "denied", "waitlisted"]
+            "enum": [
+              "booked",
+              "cancelled",
+              "denied",
+              "waitlisted"
+            ]
           },
           "participants": {
             "type": "array",
@@ -9622,10 +9828,16 @@
       },
       "ChoirRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "rehearsal_time", "rehearsal_day"],
+            "required": [
+              "name",
+              "rehearsal_time",
+              "rehearsal_day"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -9735,7 +9947,11 @@
       },
       "Choir": {
         "type": "object",
-        "required": ["name", "rehearsal_time", "rehearsal_day"],
+        "required": [
+          "name",
+          "rehearsal_time",
+          "rehearsal_day"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -11834,10 +12050,14 @@
       },
       "ConcertRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["state"],
+            "required": [
+              "state"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -11884,7 +12104,12 @@
               },
               "state": {
                 "type": "string",
-                "enum": ["draft", "editorial", "published", "archived"]
+                "enum": [
+                  "draft",
+                  "editorial",
+                  "published",
+                  "archived"
+                ]
               },
               "published": {
                 "type": "string",
@@ -11962,7 +12187,9 @@
       },
       "Concert": {
         "type": "object",
-        "required": ["state"],
+        "required": [
+          "state"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -12250,7 +12477,12 @@
           },
           "state": {
             "type": "string",
-            "enum": ["draft", "editorial", "published", "archived"]
+            "enum": [
+              "draft",
+              "editorial",
+              "published",
+              "archived"
+            ]
           },
           "published": {
             "type": "string",
@@ -14105,7 +14337,12 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["draft", "editorial", "published", "archived"]
+                  "enum": [
+                    "draft",
+                    "editorial",
+                    "published",
+                    "archived"
+                  ]
                 },
                 "published": {
                   "type": "string",
@@ -14335,7 +14572,9 @@
       },
       "CourseRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "required": [
@@ -16571,7 +16810,12 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["booked", "cancelled", "denied", "waitlisted"]
+                  "enum": [
+                    "booked",
+                    "cancelled",
+                    "denied",
+                    "waitlisted"
+                  ]
                 },
                 "participants": {
                   "type": "array",
@@ -16710,10 +16954,15 @@
       },
       "DistrictRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "number"],
+            "required": [
+              "name",
+              "number"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -16823,7 +17072,10 @@
       },
       "District": {
         "type": "object",
-        "required": ["name", "number"],
+        "required": [
+          "name",
+          "number"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -19040,10 +19292,14 @@
       },
       "TeamMemberRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name"],
+            "required": [
+              "name"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -19163,7 +19419,9 @@
       },
       "TeamMember": {
         "type": "object",
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -20258,7 +20516,12 @@
                     },
                     "state": {
                       "type": "string",
-                      "enum": ["draft", "editorial", "published", "archived"]
+                      "enum": [
+                        "draft",
+                        "editorial",
+                        "published",
+                        "archived"
+                      ]
                     },
                     "published": {
                       "type": "string",
@@ -21175,7 +21438,12 @@
                     },
                     "state": {
                       "type": "string",
-                      "enum": ["booked", "cancelled", "denied", "waitlisted"]
+                      "enum": [
+                        "booked",
+                        "cancelled",
+                        "denied",
+                        "waitlisted"
+                      ]
                     },
                     "participants": {
                       "type": "array",
@@ -21292,7 +21560,13 @@
           },
           "function": {
             "type": "string",
-            "enum": ["lpw", "rpw", "board_member", "chairperson", "other_team"]
+            "enum": [
+              "lpw",
+              "rpw",
+              "board_member",
+              "chairperson",
+              "other_team"
+            ]
           },
           "districts": {
             "type": "array",
