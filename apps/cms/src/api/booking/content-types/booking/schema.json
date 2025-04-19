@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "booked_by": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "bookings"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "bookings"
+    },
+    "booked_at": {
+      "type": "datetime"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "booked",
+        "cancelled",
+        "denied",
+        "waitlisted"
+      ]
+    },
+    "participants": {
+      "displayName": "participant",
+      "type": "component",
+      "repeatable": true,
+      "component": "events.participant",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

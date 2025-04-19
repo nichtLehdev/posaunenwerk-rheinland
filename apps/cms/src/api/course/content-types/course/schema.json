@@ -1,0 +1,100 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "course",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content": {
+      "type": "blocks",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "start": {
+      "type": "datetime",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "end": {
+      "type": "datetime",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.adress"
+    },
+    "registration_until": {
+      "type": "datetime"
+    },
+    "available_slots": {
+      "type": "integer",
+      "default": 60,
+      "required": true
+    },
+    "registration_open": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "additional_fields": {
+      "displayName": "additional_fields",
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.additional-fields"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "course"
+    },
+    "district": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::district.district"
+    }
+  }
+}

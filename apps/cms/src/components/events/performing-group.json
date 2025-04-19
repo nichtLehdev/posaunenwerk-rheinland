@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_events_performing_groups",
+  "info": {
+    "displayName": "performing group",
+    "icon": "music"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

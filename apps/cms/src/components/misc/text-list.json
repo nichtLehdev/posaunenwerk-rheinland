@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_misc_text_lists",
+  "info": {
+    "displayName": "Text List",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    }
+  }
+}

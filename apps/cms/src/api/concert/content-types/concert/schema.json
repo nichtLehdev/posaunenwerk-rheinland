@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "concerts",
+  "info": {
+    "singularName": "concert",
+    "pluralName": "concerts",
+    "displayName": "concert",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "group": {
+      "displayName": "performing group",
+      "type": "component",
+      "repeatable": false,
+      "component": "events.performing-group"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "banner": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "address": {
+      "displayName": "adress",
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.adress"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "editorial",
+        "published",
+        "archived"
+      ],
+      "default": "draft",
+      "required": true
+    },
+    "published": {
+      "type": "datetime"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "district": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::district.district"
+    }
+  }
+}

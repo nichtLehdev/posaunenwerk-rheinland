@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_misc_people",
+  "info": {
+    "displayName": "person",
+    "icon": "walk"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

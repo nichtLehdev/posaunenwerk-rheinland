@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_events_participants",
+  "info": {
+    "displayName": "participant",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "comment": {
+      "type": "text"
+    },
+    "answers": {
+      "type": "json"
+    }
+  }
+}

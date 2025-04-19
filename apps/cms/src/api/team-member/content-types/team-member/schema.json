@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_members",
+  "info": {
+    "singularName": "team-member",
+    "pluralName": "team-members",
+    "displayName": "team member",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "function": {
+      "type": "enumeration",
+      "enum": [
+        "lpw",
+        "rpw",
+        "board_member",
+        "chairperson",
+        "other_team"
+      ]
+    },
+    "districts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::district.district",
+      "mappedBy": "chairpersons"
+    }
+  }
+}

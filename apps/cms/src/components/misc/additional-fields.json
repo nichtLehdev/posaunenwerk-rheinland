@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_misc_additional_fields",
+  "info": {
+    "displayName": "additional_fields",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Text",
+        "Number",
+        "Enumeration",
+        "Boolean"
+      ]
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "options": {
+      "displayName": "Text List",
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.text-list"
+    }
+  }
+}

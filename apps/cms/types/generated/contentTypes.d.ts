@@ -369,6 +369,384 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
+  collectionName: 'articles';
+  info: {
+    description: '';
+    displayName: 'article';
+    pluralName: 'articles';
+    singularName: 'article';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    author: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    banner: Schema.Attribute.Media<'images' | 'files', true>;
+    content: Schema.Attribute.Blocks &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article.article'
+    >;
+    published: Schema.Attribute.DateTime &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    publisher: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    state: Schema.Attribute.Enumeration<
+      ['draft', 'editorial', 'published', 'archived']
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'draft'>;
+    thumbnail: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBookingBooking extends Struct.CollectionTypeSchema {
+  collectionName: 'bookings';
+  info: {
+    displayName: 'booking';
+    pluralName: 'bookings';
+    singularName: 'booking';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    booked_at: Schema.Attribute.DateTime;
+    booked_by: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    course: Schema.Attribute.Relation<'manyToOne', 'api::course.course'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::booking.booking'
+    >;
+    participants: Schema.Attribute.Component<'events.participant', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    state: Schema.Attribute.Enumeration<
+      ['booked', 'cancelled', 'denied', 'waitlisted']
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiChoirChoir extends Struct.CollectionTypeSchema {
+  collectionName: 'choirs';
+  info: {
+    description: '';
+    displayName: 'choir';
+    pluralName: 'choirs';
+    singularName: 'choir';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'misc.person', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    district: Schema.Attribute.Relation<'manyToOne', 'api::district.district'>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::choir.choir'>;
+    location: Schema.Attribute.Component<'misc.adress', false>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    pc_code: Schema.Attribute.String;
+    published: Schema.Attribute.Boolean;
+    publishedAt: Schema.Attribute.DateTime;
+    rehearsal_day: Schema.Attribute.Enumeration<
+      [
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    rehearsal_time: Schema.Attribute.Time & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'name'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    website: Schema.Attribute.String;
+  };
+}
+
+export interface ApiConcertConcert extends Struct.CollectionTypeSchema {
+  collectionName: 'concerts';
+  info: {
+    description: '';
+    displayName: 'concert';
+    pluralName: 'concerts';
+    singularName: 'concert';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Schema.Attribute.Component<'misc.adress', false>;
+    banner: Schema.Attribute.Media<'images' | 'files', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.DateTime;
+    description: Schema.Attribute.Blocks;
+    district: Schema.Attribute.Relation<'oneToOne', 'api::district.district'>;
+    group: Schema.Attribute.Component<'events.performing-group', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::concert.concert'
+    > &
+      Schema.Attribute.Private;
+    published: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    state: Schema.Attribute.Enumeration<
+      ['draft', 'editorial', 'published', 'archived']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'draft'>;
+    thumbnail: Schema.Attribute.Media<'images' | 'files', true>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
+  collectionName: 'courses';
+  info: {
+    description: '';
+    displayName: 'course';
+    pluralName: 'courses';
+    singularName: 'course';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    additional_fields: Schema.Attribute.Component<
+      'misc.additional-fields',
+      true
+    >;
+    available_slots: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<60>;
+    bookings: Schema.Attribute.Relation<'oneToMany', 'api::booking.booking'>;
+    content: Schema.Attribute.Blocks &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    district: Schema.Attribute.Relation<'oneToOne', 'api::district.district'>;
+    end: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::course.course'>;
+    location: Schema.Attribute.Component<'misc.adress', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    registration_open: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    registration_until: Schema.Attribute.DateTime;
+    start: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    thumbnail: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDistrictDistrict extends Struct.CollectionTypeSchema {
+  collectionName: 'districts';
+  info: {
+    displayName: 'district';
+    pluralName: 'districts';
+    singularName: 'district';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    chairpersons: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::team-member.team-member'
+    >;
+    choirs: Schema.Attribute.Relation<'oneToMany', 'api::choir.choir'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::district.district'
+    >;
+    map: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    number: Schema.Attribute.Integer & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
+  collectionName: 'team_members';
+  info: {
+    description: '';
+    displayName: 'team member';
+    pluralName: 'team-members';
+    singularName: 'team-member';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    avatar: Schema.Attribute.Media<'images' | 'files'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    districts: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::district.district'
+    >;
+    function: Schema.Attribute.Enumeration<
+      ['lpw', 'rpw', 'board_member', 'chairperson', 'other_team']
+    >;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    mail: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -824,10 +1202,15 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
+    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+    articles_published: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article.article'
+    >;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    bookings: Schema.Attribute.Relation<'oneToMany', 'api::booking.booking'>;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
@@ -878,6 +1261,13 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::article.article': ApiArticleArticle;
+      'api::booking.booking': ApiBookingBooking;
+      'api::choir.choir': ApiChoirChoir;
+      'api::concert.concert': ApiConcertConcert;
+      'api::course.course': ApiCourseCourse;
+      'api::district.district': ApiDistrictDistrict;
+      'api::team-member.team-member': ApiTeamMemberTeamMember;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

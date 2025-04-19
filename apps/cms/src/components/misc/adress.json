@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_misc_adresses",
+  "info": {
+    "displayName": "address",
+    "icon": "pin",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "street": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "string",
+      "required": true
+    },
+    "postcode": {
+      "type": "integer",
+      "required": true,
+      "max": 99999
+    },
+    "city": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "decimal"
+    },
+    "longitude": {
+      "type": "biginteger"
+    }
+  }
+}
