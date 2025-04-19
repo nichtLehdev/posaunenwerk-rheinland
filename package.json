@@ -1,0 +1,20 @@
+{
+  "name": "posaunenwerk",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -n web,cms -c blue,green \"pnpm --filter web dev\" \"pnpm --filter cms develop\""
+  },
+  "keywords": [],
+  "author": "lehdev",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.1",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

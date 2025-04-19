@@ -1,0 +1,32 @@
+#!/bin/bash
+set -e
+
+echo "🔧 Running custom Postgres initialization script..."
+
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+
+  -- Create Strapi user
+  CREATE USER $STRAPI_USERNAME WITH PASSWORD '$STRAPI_PASSWORD';
+  GRANT ALL PRIVILEGES ON DATABASE $POSTGRES_DB TO $STRAPI_USERNAME;
+
+  -- Give strapi_user access to the public schema
+  GRANT USAGE ON SCHEMA public TO $STRAPI_USERNAME;
+  GRANT CREATE ON SCHEMA public TO $STRAPI_USERNAME;
+  GRANT ALL ON SCHEMA public TO $STRAPI_USERNAME;
+  ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO $STRAPI_USERNAME;
+
+  -- Create web app user
+  CREATE USER $WEB_USERNAME WITH PASSWORD '$WEB_PASSWORD';
+
+  -- Create separate schema for web app
+  CREATE SCHEMA IF NOT EXISTS app AUTHORIZATION $WEB_USERNAME;
+
+  -- Give web_user access to app schema
+  GRANT USAGE ON SCHEMA app TO $WEB_USERNAME;
+  GRANT CREATE ON SCHEMA app TO $WEB_USERNAME;
+  GRANT ALL ON SCHEMA app TO $WEB_USERNAME;
+  ALTER DEFAULT PRIVILEGES IN SCHEMA app GRANT ALL ON TABLES TO $WEB_USERNAME;
+
+EOSQL
+
+echo "✅ Custom users and schema setup complete."
